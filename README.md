@@ -15,6 +15,11 @@ So today we will need this commands:
 
 #### Integrating Switch
 ```
+mqtt:
+  broker: IP_ADDRESS_BROKER
+```
+
+```
 switch:
     platform: mqtt
     name: "Whatever you want"
