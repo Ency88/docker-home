@@ -12,6 +12,17 @@ So today we will need this commands:
 ### Mosquito
 ```docker run -itd --name="mosquitto" --restart on-failure -p 1883:1883 -p 9001:9001 -v ~/smart-home/mosquitto/log:/mosquitto/data -v /home/ency/smart-home/mosquitto/log:/mosquitto/log eclipse-mosquitto```
 
+#### Integrating Switch
+switch:
+    platform: mqtt
+    name: "Whatever you want"
+    command_topic: "cmnd/<topic>/power"
+    state_topic: "stat/<topic>/POWER"
+    qos: 1
+    payload_on: "ON"
+    payload_off: "OFF"
+    retain: true
+
 ### Node Red (Optional)
 
 ```docker run -d --name=node-red --restart=always -p 1880:1880 -u 1000:1000 -v ~/smart-home/node-red:/data nodered/node-red-docker:rpi-v8```
