@@ -11,7 +11,7 @@ So today we will need this commands:
 ```docker run -d --restart always --name="home-assistant" -v ~/smart-home/home-assistant/config:/config -v /etc/localtime:/etc/localtime:ro -p 8123:8123 homeassistant/raspberrypi3-homeassistant```
 
 ### Mosquito
-```docker run -itd --name="mosquitto" --restart on-failure -p 1883:1883 -p 9001:9001 -v ~/smart-home/mosquitto/log:/mosquitto/data -v /home/ency/smart-home/mosquitto/log:/mosquitto/log eclipse-mosquitto```
+```docker run -itd --name="mosquitto" --restart on-failure -p 1883:1883 -p 9001:9001 -v ~/smart-home/mosquitto/log:/mosquitto/data -v ~/smart-home/mosquitto/log:/mosquitto/log eclipse-mosquitto```
 
 #### Integrating Switch
 ```
