@@ -14,5 +14,4 @@ So today we will need this commands:
 
 ### Node Red (Optional)
 
-```docker run -d --name=node-red --restart=always -p 1880:1880 -u 1000:1000 -v ~/smart-home/node-red:/data nodered/node-red-docker:rpi-v8
-```
+```docker run -d --name=node-red --restart=always -p 1880:1880 -u 1000:1000 -v ~/smart-home/node-red:/data nodered/node-red-docker:rpi-v8```
