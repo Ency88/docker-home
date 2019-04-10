@@ -4,6 +4,7 @@ So today we will need this commands:
 
 ### Portainer
 ``` make dirs```
+
 ```docker run -d -p 9000:9000 --name portainer --restart always -v /var/run/docker.sock:/var/run/docker.sock -v ~/smart-home/portainer/data:/data portainer/portainer:arm```
 
 ### Home-Assistant
@@ -13,6 +14,7 @@ So today we will need this commands:
 ```docker run -itd --name="mosquitto" --restart on-failure -p 1883:1883 -p 9001:9001 -v ~/smart-home/mosquitto/log:/mosquitto/data -v /home/ency/smart-home/mosquitto/log:/mosquitto/log eclipse-mosquitto```
 
 #### Integrating Switch
+```
 switch:
     platform: mqtt
     name: "Whatever you want"
@@ -22,6 +24,7 @@ switch:
     payload_on: "ON"
     payload_off: "OFF"
     retain: true
+ ```
 
 ### Node Red (Optional)
 
