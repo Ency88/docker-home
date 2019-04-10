@@ -30,6 +30,17 @@ switch:
     payload_off: "OFF"
     retain: true
  ```
+ 
+ ```
+sensor: 
+  - platform: mqtt
+    state_topic: 'tele/sonoff-team3/SENSOR'
+    name: 'Temperature'
+    unit_of_measurement: '°C'
+    value_template: '{{ value_json.DS18B20.Temperature }}'
+```
+ 
+ 
 
 ### Node Red (Optional)
 
